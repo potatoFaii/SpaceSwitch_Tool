@@ -254,7 +254,7 @@ def createLocatorDouble(rotateOrder):
 			createdCtrls.append(ctrl)
 			prtCnt = cmds.parentConstraint(obj, ctrl, mo=False)[0]
 			cmds.delete(prtCnt)
-			cmds.setAttr("{}.rotateOrder".format(ctrl), ROTATE_ORDER_MAP[rotateOrder])
+			cmds.xform(ctrl,p=True,rotateOrder=ROTATE_ORDER_XFORM[rotateOrder])
 			ctrlChild = cmds.duplicate(ctrl,n="{}_child".format(ctrl))
 			cmds.parent(ctrlChild,ctrl)
 			prtChildCnt = cmds.parentConstraint(obj, ctrlChild, mo=False)[0]
@@ -621,4 +621,5 @@ def setupFunction():
 	except:
 		cmds.refresh(suspend=False)
 		cmds.error('Error during the Bake')
+
 	cmds.refresh(suspend=False)
