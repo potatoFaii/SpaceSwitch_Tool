@@ -299,7 +299,7 @@ Include remove animLayer''',c=lambda x:spaceSwitch_Func.bakeFunction(self.target
 		self.guideWindow(QGuideText)
 
 	def helps(self):
-		self.helpsList('list_GL.py')
+		self.helpsList('list_SP.py')
 
 	def tutorial(self):
 		script_dirP = os.path.dirname(os.path.abspath(__file__))
