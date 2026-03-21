@@ -89,3 +89,9 @@ _#future wise planning note
 \ progressWindow allow animator to know the script is functioning without freeze or crash
 \ RND
 -modified 1/6/2026
+
+\   _________________
+\  _\__MAJOR UPDATE__\_
+\ convert multiple bake to a single list then bake all , faster instead
+\ make script more detail and try minimized the bug
+-modified 3/21/2026
