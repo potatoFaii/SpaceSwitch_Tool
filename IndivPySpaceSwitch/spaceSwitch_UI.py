@@ -13,9 +13,9 @@ import IndivPySpaceSwitch.spaceSwitch_Func as spaceSwitch_Func
 # - spaceSwitch_UI.py -
 # __author__ = 'Lui Kit Fai'
 # __license__ = ''
-# __revision__ = 6
+# __revision__ = 7
 # __category__ = 'Animation'
-# __date__ = 2026-01-08
+# __date__ = 2026-03-21
 #  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 class spaceSwitch_UI:
