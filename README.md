@@ -2,6 +2,8 @@
 
 # SpaceSwitch Tool for Autodesk Maya
 
+![UI](https://github.com/user-attachments/assets/cde54c7d-7160-4681-b5f3-1cb2ec6a5884)
+
 ---
 
 ## Overview
