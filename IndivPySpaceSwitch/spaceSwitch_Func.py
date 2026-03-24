@@ -390,7 +390,10 @@ def createLocatorDouble(rotateOrder):
 			
 			ctrlChild = cmds.duplicate(ctrl,n="{}_child".format(ctrl))[0]
 			cmds.parent(ctrlChild,ctrl)
-			prtChildCnt = cmds.parentConstraint(obj, ctrlChild, mo=False)[0]
+			for attr in ['tx', 'ty', 'tz', 'rx', 'ry', 'rz']:
+				cmds.setAttr("{}.{}".format(ctrlChild, attr), 0)
+
+			prtChildCnt = cmds.parentConstraint(obj, ctrlChild, mo=True)[0]
 
 			createdCtrls.append(ctrlChild)
 			ctrlObjPairs.append((ctrlChild,obj))
