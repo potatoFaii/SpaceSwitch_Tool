@@ -385,9 +385,9 @@ def createLocatorDouble(rotateOrder):
 
 			ctrl = ctrlList[0]
 			prtCnt = cmds.parentConstraint(obj, ctrl, mo=False)[0]
-			cmds.delete(prtCnt)
 			cmds.setAttr("{}.rotateOrder".format(ctrl),ROTATE_ORDER_MAP[rotateOrder])
-			
+			cmds.delete(prtCnt)
+
 			ctrlChild = cmds.duplicate(ctrl,n="{}_child".format(ctrl))[0]
 			cmds.parent(ctrlChild,ctrl)
 			for attr in ['tx', 'ty', 'tz', 'rx', 'ry', 'rz']:
@@ -485,9 +485,10 @@ def createLocatorManual(rotOrder):
 			return []
 
 		ctrl = ctrlList[0]
+		cmds.setAttr("{}.rotateOrder".format(ctrl), ROTATE_ORDER_MAP[rotOrder])
 		cmds.xform(ctrl, ws=True, t=center_piv)
 		cmds.matchTransform(ctrl, sel_objs[0], rot=True)
-		cmds.setAttr("{}.rotateOrder".format(ctrl), ROTATE_ORDER_MAP[rotOrder])
+		#cmds.setAttr("{}.rotateOrder".format(ctrl), ROTATE_ORDER_MAP[rotOrder])
 		ctrl = cmds.rename(ctrl,"{}_Manual".format(clean_name_keep_namespace(ctrl)))
 		createdCtrls.append(ctrl)
 		mel.eval('print("RESULT: <{}> locator CREATED\\n")'.format(ctrl))
