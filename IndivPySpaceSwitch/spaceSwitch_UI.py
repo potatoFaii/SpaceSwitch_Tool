@@ -15,7 +15,7 @@ import IndivPySpaceSwitch.spaceSwitch_Func as spaceSwitch_Func
 # __license__ = ''
 # __revision__ = 7
 # __category__ = 'Animation'
-# __date__ = 2026-03-21
+# __date__ = 2026-05-03
 #  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 class spaceSwitch_UI:
@@ -288,9 +288,10 @@ Include remove animLayer''',c=lambda x:spaceSwitch_Func.bakeFunction(self.target
 
 	def helpsList(self,fileNameFormat):
 		script_dir = os.path.dirname(os.path.abspath(__file__))
-		script_dir = script_dir.replace("IndivPySpaceSwitch","List_SpaceSwitchk")
+		script_dir = script_dir.replace("IndivPySpaceSwitch","List_SpaceSwitch")
 		file_name = fileNameFormat
 		file_pathQ = os.path.join(script_dir, file_name)
+		print (file_pathQ)
 		try:
 			with open(file_pathQ, 'r') as file:
 				QGuideText = file.read()
